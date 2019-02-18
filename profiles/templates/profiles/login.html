@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block body_block %}
+
+<div class="container">
+  <h3>برای ثبت نام فیلدهای زیر را پر کنید</h3>
+  <form method="POST">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input type="submit" class="btn btn-default" value="تایید و ثبت نام">
+
+  </form>
+
+</div>
+{% endblock %}
